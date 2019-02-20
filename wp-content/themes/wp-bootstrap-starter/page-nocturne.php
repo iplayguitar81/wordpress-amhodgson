@@ -22,14 +22,21 @@ get_header(); ?>
 
     body{
         background-color: #535151;
+        background-image: url('/wp-content/themes/wp-bootstrap-starter/images/nocturne-bg.png');
+        background-size: auto 80%;
+        background-repeat: no-repeat;
+        background-position:left center;
+
+
     }
 </style>
+
 
     <div id="nocturne" class="container">
 
         <div class="row">
 
-            <div class="col-lg-7">
+            <div id="left-book-col" class="col-lg-7 offset-lg-1">
                 <br/>
                 <h1 class="chand book-titles">Nocturne</h1>
                 <h3 class="book-sub-titles text-center">Book Four of the Rhapsody Quartet</h3>
@@ -51,7 +58,7 @@ get_header(); ?>
                 <h4 class="purchase-online-sub">Purchase Online:</h4>
                 <h4><a class="book-links" href="#">Paperback &bull; Kindle</a></h4>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-4">
 
                 <br/>
                 <br/>

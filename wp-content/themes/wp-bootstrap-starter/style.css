@@ -57,6 +57,7 @@ h1.book-titles{
 
     font-size: 4em;
     color: #ffffff;
+    text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 2px 0 #000, 2px 2px 0 #000;
 
 }
 
@@ -77,11 +78,26 @@ a.book-links{
 
 #nocturne{
 
-    background-color: #535151;
+    /*background-color: #535151;*/
     font-family: Georgia;
     color: #ffffff;
+    /*background-image: url('/wp-content/themes/wp-bootstrap-starter/images/nocturne-bg.png');*/
+    /*background-size: cover;*/
 }
 
+#nocturne.container{
+
+    /*background-color: #535151;*/
+    /*font-family: Georgia;*/
+    /*color: #ffffff;*/
+    /*background-image: url('/wp-content/themes/wp-bootstrap-starter/images/nocturne-bg.png');*/
+    /*background-size: cover;*/
+    /*background-position:left center;*/
+}
+
+#left-book-col{
+    /*background-color:rgba(83, 81, 81, 0.5);*/
+}
 
 body {
   margin: 0;
