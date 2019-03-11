@@ -64,7 +64,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link disabled" href="/press-and-events">Press &amp; Events</a>
+                            <a class="nav-link disabled" href="/events">Press &amp; Events</a>
                         </li>
 
 

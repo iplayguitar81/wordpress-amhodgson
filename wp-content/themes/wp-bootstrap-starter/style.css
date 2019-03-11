@@ -37,18 +37,145 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
+
 @font-face {
-  font-family: 'CHand';
-  src: url("/wp-content/themes/wp-bootstrap-starter/fonts/CHand.otf"); }
+    font-family: 'CHand2';
+    src: url("https://dl.dropboxusercontent.com/s/1py8oxwtsh4p901/C-Hand.otf"); !important }
 
 .chand{
-  font-family: 'CHand';
+  font-family: 'CHand2';
 
 }
 
 .georgia{
     font-family:'Georgia';
 }
+
+/*calendar styles*/
+
+
+/*find events button on calendar*/
+#tribe-bar-form .tribe-bar-submit input[type=submit]{
+    background-color: #666;
+}
+
+
+h3.tribe-events-month-event-title a {
+    color: #000000;
+    font-weight: 800;
+}
+
+.tribe-events-calendar thead th {
+    background-color: #000000;
+}
+
+h1.calendar-month-title{
+
+    /*font-size: 4em;*/
+    color: #000000;
+    /*text-shadow: -1px -1px 0 #000, 2px -1px 0 #000, -1px 2px 0 #000, 2px 2px 0 #000;*/
+
+}
+
+
+.tribe-events-calendar div[id*=tribe-events-daynum-], .tribe-events-calendar div[id*=tribe-events-daynum-] a {
+
+    background-color: #666;
+}
+
+
+/*calendar current day highlight style*/
+#tribe-events .tribe-events-button, #tribe-events .tribe-events-button:hover, #tribe_events_filters_wrapper input[type=submit], .tribe-events-button, .tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive, .tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-], .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+    background-color: #000000;
+}
+
+/*calendar event opacity... was set to .5 which is no bueno!*/
+
+.tribe-events-calendar td.tribe-events-past .tribe-events-month-event-title a,
+.tribe-events-calendar td.tribe-events-past .tribe-events-viewmore a {
+    opacity: 1;
+    font-family:Georgia;
+}
+
+/*calendar/list/day view select styles...*/
+
+#tribe-bar-views-toggle{
+    font-family: Georgia;
+
+}
+
+
+#tribe-bar-views .tribe-bar-views-option {
+    font-family:Georgia;
+}
+
+
+/*events list styles*/
+
+a.tribe-event-url{
+    color:#000000;
+
+}
+
+
+/*events day styles*/
+
+.tribe-events-day .tribe-events-day-time-slot .tribe-events-day-time-slot-heading{
+
+    background-color: #666;
+}
+
+h3.tribe-events-list-event-title a {
+    color: #000000;
+}
+
+ul.alert {
+    list-style:none;
+}
+
+
+#tribe-events .tribe-events-button, #tribe-events .tribe-events-button:hover,
+#tribe_events_filters_wrapper input[type=submit], .tribe-events-button,
+.tribe-events-button.tribe-active:hover, .tribe-events-button.tribe-inactive,
+.tribe-events-button:hover, .tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-],
+.tribe-events-calendar td.tribe-events-present div[id*=tribe-events-daynum-]>a {
+    background-color: #000000;
+    color: #ffffff;
+}
+/*calendar mobile styles...*/
+
+
+a.mobile-calendar-h4 {
+
+    color: #000000;
+
+}
+@media screen and (max-width: 768px) {
+
+    #tribe-events-content .tribe-events-calendar td.tribe-events-present.mobile-active:hover,
+    .tribe-events-calendar td.tribe-events-present.mobile-active,
+    .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-],
+    .tribe-events-calendar td.tribe-events-present.mobile-active div[id*=tribe-events-daynum-] a {
+
+        background-color: #000000;
+
+    }
+
+    #tribe-events-content .tribe-events-calendar .mobile-active:hover,
+    #tribe-events-content .tribe-events-calendar td.tribe-events-othermonth.mobile-active,
+    #tribe-events-content .tribe-events-calendar td.tribe-events-othermonth.mobile-active div[id*=tribe-events-daynum-],
+    #tribe-events-content .tribe-events-calendar td.tribe-events-othermonth.mobile-active div[id*=tribe-events-daynum-] a,
+    .tribe-events-calendar .mobile-active div[id*=tribe-events-daynum-],
+    .tribe-events-calendar .mobile-active div[id*=tribe-events-daynum-] a,
+    .tribe-events-calendar td.mobile-active {
+        background-color: #000000;
+    }
+
+
+}
+
+
+
 
 
 /*books pages styles*/
@@ -359,7 +486,7 @@ table {
 a.site-title, .site-description{
 
     color: #000000 !important;
-    font-size: 2em !important;
+    font-size: 1em !important;
 }
 
 header#masthead {
