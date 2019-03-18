@@ -15,7 +15,7 @@
     if(!$enable_vc ) {
     ?>
     <header class="entry-header">
-		<?php the_title( '<h1 class="entry-title chand">', '</h1>' ); ?>
+		<?php the_title( '<h1 class="text-center entry-title chand">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
     <?php } ?>
 

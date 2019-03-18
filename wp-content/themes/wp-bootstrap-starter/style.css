@@ -175,7 +175,11 @@ a.mobile-calendar-h4 {
 }
 
 
+/*author page style...*/
 
+.ec-author{
+    font-size: 1.3em;
+}
 
 
 /*books pages styles*/
@@ -432,8 +436,8 @@ p {
   margin-bottom: 1.5em;
 }
 h1.entry-title {
-  font-size: 3.2rem;
-  border-bottom: 1px solid #eaecef;
+  font-size: 2rem;
+  /*border-bottom: 1px solid #eaecef;*/
 }
 
 h2.entry-title {
