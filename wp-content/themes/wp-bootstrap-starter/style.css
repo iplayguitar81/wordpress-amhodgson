@@ -436,7 +436,8 @@ p {
   margin-bottom: 1.5em;
 }
 h1.entry-title {
-  font-size: 2rem;
+    font-size: 2rem;
+    line-height: 1.5em;
   /*border-bottom: 1px solid #eaecef;*/
 }
 

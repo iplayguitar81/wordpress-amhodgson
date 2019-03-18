@@ -15,8 +15,8 @@
 get_header(); ?>
     <br/>
     <br/>
-<!--    <section id="primary" class="content-area col-sm-12 col-lg-12">-->
-<!--        <main id="main" class="site-main" role="main">-->
+    <section id="primary" class="content-area col-sm-12 col-lg-12">
+        <main id="main" class="site-main" role="main">
 
             <div class="row">
 
@@ -56,7 +56,8 @@ get_header(); ?>
     <br/>
     <br/>
     <br/>
-<!--        </main>-->
+        </main>
+    </section>
 
 
 <?php
