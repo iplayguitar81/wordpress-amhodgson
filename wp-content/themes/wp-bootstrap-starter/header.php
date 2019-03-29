@@ -46,9 +46,21 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto georgia">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="/books">Books</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Books
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="/books/prelude">Prelude</a>
+                                <a class="dropdown-item" href="/books/sonata">Sonata</a>
+                                <a class="dropdown-item" href="/books/caprice">Caprice</a>
+                                <a class="dropdown-item" href="/books/nocturne">Nocturne</a>
+                                <br/>
+                            </div>
                         </li>
+
+
                         <li class="nav-item">
                             <a class="nav-link" href="/author">Author</a>
                         </li>

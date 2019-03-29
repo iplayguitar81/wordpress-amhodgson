@@ -51,8 +51,27 @@ Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready, 
     font-family:'Georgia';
 }
 
-/*calendar styles*/
 
+
+/*upper nav menu styles*/
+
+a.dropdown-item {
+    color:#000000;
+    font-size:1rem;
+    font-weight:800;
+}
+
+
+a.dropdown-item:hover {
+    color:#777777;
+}
+
+
+a.dropdown-item:visited {
+    color:#000000;
+}
+
+/*calendar styles*/
 
 /*find events button on calendar*/
 #tribe-bar-form .tribe-bar-submit input[type=submit]{
@@ -217,26 +236,36 @@ a.book-links{
 
 #nocturne{
 
-    /*background-color: #535151;*/
     font-family: Georgia;
     color: #ffffff;
-    /*background-image: url('/wp-content/themes/wp-bootstrap-starter/images/nocturne-bg.png');*/
-    /*background-size: cover;*/
+
 }
 
-#nocturne.container{
 
-    /*background-color: #535151;*/
-    /*font-family: Georgia;*/
-    /*color: #ffffff;*/
-    /*background-image: url('/wp-content/themes/wp-bootstrap-starter/images/nocturne-bg.png');*/
-    /*background-size: cover;*/
-    /*background-position:left center;*/
-}
 
 #left-book-col{
-    /*background-color:rgba(83, 81, 81, 0.5);*/
+
 }
+
+
+/*extras page styles*/
+
+
+#extras a {
+    color: #000000;
+    font-size: 1.2em;
+}
+
+#extras a:hover {
+    color: #000000;
+    font-size: 1.2em;
+}
+
+#extras a:visited {
+    color: #000000;
+    font-size: 1.2em;
+}
+
 
 body {
   margin: 0;
@@ -637,11 +666,11 @@ body:not(.theme-preset-active) #masthead .navbar-nav > li.current_page_item > a 
 
 .dropdown-menu .dropdown-item {
   white-space: normal;
-  background: transparent;
+  background: #FFFFFF;
   line-height: 1.6;
 }
 .dropdown-menu .dropdown-item:hover {
-  background: transparent;
+  background: #FFFFFF;
 }
 
 @media screen and (min-width: 37.5em) {
