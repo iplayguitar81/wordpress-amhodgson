@@ -267,9 +267,76 @@ a.book-links{
 }
 
 
+
+
+/*gallery/fan art styles*/
+
+/*gallery captions:*/
+/* Add multi-line by line breaks to Gutenberg galleries. */
+.blocks-gallery-item figcaption {
+    white-space: pre-line;
+    color: #000000 !important;
+}
+
+/* Prevent the last image from growing to fill available space if there aren't enough images in a row. */
+.blocks-gallery-item {
+    flex-grow: 0 !important;
+    display: inline-block !important;
+}
+
+.wp-block-gallery .blocks-gallery-image figure, .wp-block-gallery .blocks-gallery-item figure {
+    display: inline-block;
+    /*height: 70%;*/
+    padding: .2em 0 .2em 0;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption, .wp-block-gallery .blocks-gallery-item figcaption {
+    position: relative;
+    background: none;
+    margin: 0 0 1.1em 0;
+    padding: 0;
+}
+
+.wp-block-gallery .blocks-gallery-image figcaption,
+.wp-block-gallery .blocks-gallery-item figcaption {
+    font-size: 1.2rem;
+}
+
+/*blog/index article listing styles...*/
+
+.blog-index-titles{
+    color: #000000;
+}
+
+.blog-index-titles a{
+    color: #000000;
+    font-size: 1.2em;
+}
+
+
+div.index-post p {
+    font-size: 1.2em;
+}
+
+div.entry-meta {
+    font-family: Georgia;
+}
+div.entry-meta a {
+    color: #000000;
+}
+
+
+/*sidebar styles*/
+
+.sidebar-amhodgson{
+    font-size:1.2em;
+}
+
+
+
 body {
   margin: 0;
-  -webkit-font-smoothing: auto;
+  /*-webkit-font-smoothing: auto;*/
 }
 
 article,
@@ -883,7 +950,7 @@ a img.aligncenter {
 --------------------------------------------------------------*/
 .widget {
   margin: 0 0 1.5em;
-  font-size: 0.875rem;
+  /*font-size: 0.875rem;*/
   /* Make sure select elements fit in widgets. */
 }
 .widget select {
@@ -1229,7 +1296,7 @@ body:not(.theme-preset-active) footer#colophon {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 1024px) {
   html {
-    font-size: 90%;
+    /*font-size: 90%;*/
   }
 }
 /*--------------------------------------------------------------
@@ -1237,7 +1304,7 @@ body:not(.theme-preset-active) footer#colophon {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 960px) {
   html {
-    font-size: 85%;
+    /*font-size: 85%;*/
   }
 }
 /*--------------------------------------------------------------
@@ -1245,7 +1312,7 @@ body:not(.theme-preset-active) footer#colophon {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 768px) {
   html {
-    font-size: 80%;
+    /*font-size: 80%;*/
   }
 }
 /*--------------------------------------------------------------
@@ -1253,6 +1320,6 @@ body:not(.theme-preset-active) footer#colophon {
 --------------------------------------------------------------*/
 @media only screen and (max-width: 480px) {
   html {
-    font-size: 75%;
+    /*font-size: 75%;*/
   }
 }

@@ -507,3 +507,50 @@ class Tribe__Events__Remove__Export__Links {
 }
 new Tribe__Events__Remove__Export__Links();
 
+
+//add content before and after the_content depending on the type of page...
+function wpdev_before_after($content) {
+
+    if ( is_single() ) {
+        $beforecontent = '<div class="single-post">';
+        $aftercontent = '</div>';
+    }
+
+    else {
+
+        $beforecontent = '<div class="index-post">';
+        $aftercontent = '</div>';
+    }
+
+    $fullcontent = $beforecontent . $content . $aftercontent;
+    return $fullcontent;
+
+}
+add_filter('the_content', 'wpdev_before_after');
+
+add_filter('the_excerpt', 'wpdev_before_after');
+
+
+
+
+function new_excerpt_more( $more ) {
+    return '... <a class="read-more btn btn-md btn-dark mt-2" href="'. get_permalink( get_the_ID() ) . '">' . __('Read More', 'your-text-domain') . '</a>';
+}
+add_filter( 'excerpt_more', 'new_excerpt_more' );
+
+
+
+//remove class from the_post_thumbnail
+function the_post_thumbnail_remove_class($output) {
+    $output = preg_replace('/class=".*?"/', 'class="img-fluid"', $output);
+    return $output;
+}
+add_filter('post_thumbnail_html', 'the_post_thumbnail_remove_class');
+
+add_filter( 'post_thumbnail_html', 'remove_width_attribute', 10 );
+add_filter( 'image_send_to_editor', 'remove_width_attribute', 10 );
+
+function remove_width_attribute( $html ) {
+    $html = preg_replace( '/(width|height)="\d*"\s/', "", $html );
+    return $html;
+}

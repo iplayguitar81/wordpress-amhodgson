@@ -9,16 +9,21 @@
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<div class="post-thumbnail">
-		<?php the_post_thumbnail(); ?>
+<div class="col-lg-12 col-md-12 col-sm-12 col-12 order-1 order-lg-1 order-sm-1 mx-auto mt-4" id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<!--	<div class="col-lg-6 col-md-11 col-sm-11 col-12 order-1 order-lg-1 order-sm-1 mx-auto">-->
+
+		<?php the_post_thumbnail( 'original', array('class' => 'img-fluid')); ?>
+
 	</div>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12 order-2 order-lg-2 order-sm-2 mx-auto">
+
 	<header class="entry-header">
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title">', '</h1>' );
+			the_title( '<h1 class="entry-title chand">', '</h1>' );
 		else :
-			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+			the_title( '<h2 class="blog-index-titles chand mt-3"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) : ?>
@@ -28,12 +33,19 @@
 		<?php
 		endif; ?>
 	</header><!-- .entry-header -->
-	<div class="entry-content">
+	<div class="entry-content georgia">
 		<?php
         if ( is_single() ) :
+
+
 			the_content();
         else :
-            the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
+
+
+//            the_content( __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'wp-bootstrap-starter' ) );
+
+            the_excerpt();
+
         endif;
 
 			wp_link_pages( array(
@@ -46,4 +58,9 @@
 	<footer class="entry-footer">
 		<?php wp_bootstrap_starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+
+    <hr/>
+
+    </div>
+
+
