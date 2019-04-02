@@ -326,13 +326,31 @@ div.entry-meta a {
 }
 
 
-/*sidebar styles*/
+/*sidebar (lower sidebar home page/blog) styles*/
 
 .sidebar-amhodgson{
     font-size:1.2em;
 }
 
+ul.nav.flex-column li.nav-item a {
+    color: #000000;
+    font-weight:600;
+}
 
+ul.nav.flex-column li.nav-item a:hover {
+
+    color: #000000;
+}
+
+ul#recentcomments li.recentcomments a {
+    color: #000000;
+    font-weight: 600;
+}
+
+
+ul#recentcomments li.recentcomments a:hover {
+    color: #000000;
+}
 
 body {
   margin: 0;
@@ -958,7 +976,7 @@ a img.aligncenter {
 }
 
 .widget_search .search-form input[type="submit"] {
-  display: none;
+  /*display: none;*/
 }
 
 

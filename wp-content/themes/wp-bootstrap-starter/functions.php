@@ -121,9 +121,9 @@ function wp_bootstrap_starter_widgets_init() {
         'name'          => esc_html__( 'Sidebar', 'wp-bootstrap-starter' ),
         'id'            => 'sidebar-1',
         'description'   => esc_html__( 'Add widgets here.', 'wp-bootstrap-starter' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h3 class="widget-title">',
+        'before_widget' => '<div id="%1$s" class="col-lg-4 col-md-4 col-12 text-center mx-auto widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title text-center">',
         'after_title'   => '</h3>',
     ) );
     register_sidebar( array(
