@@ -9,8 +9,8 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-lg-8">
-		<main id="main" class="site-main" role="main">
+
+<div class="container">
 
 		<?php
 		while ( have_posts() ) : the_post();
@@ -18,6 +18,7 @@ get_header(); ?>
 			get_template_part( 'template-parts/content', get_post_format() );
 
 			    the_post_navigation();
+			    echo'<br/><br/>';
 
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
@@ -27,9 +28,17 @@ get_header(); ?>
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+    <hr/>
+    <br/>
+
+</div>
+
+<div class="row georgia mt-3">
+    <br/>
+    <?php
+    get_sidebar();
+    ?>
+</div>
 
 <?php
-get_sidebar();
 get_footer();

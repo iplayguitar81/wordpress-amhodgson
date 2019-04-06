@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 }
 ?>
 
-<div id="comments" class="comments-area">
+<div id="comments" class="comments-area georgia">
 
     <?php
     // You can start editing here -- including this comment!
@@ -94,7 +94,7 @@ if ( post_password_required() ) {
     <?php comment_form( $args = array(
         'id_form'           => 'commentform',  // that's the wordpress default value! delete it or edit it ;)
         'id_submit'         => 'commentsubmit',
-        'title_reply'       => __( 'Leave a Reply', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
+        'title_reply'       => __( 'Leave a Comment', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
         'title_reply_to'    => __( 'Leave a Reply to %s', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
         'cancel_reply_link' => __( 'Cancel Reply', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
         'label_submit'      => __( 'Post Comment', 'wp-bootstrap-starter' ),  // that's the wordpress default value! delete it or edit it ;)
@@ -103,7 +103,7 @@ if ( post_password_required() ) {
 
         'comment_notes_after' => '<p class="form-allowed-tags">' .
             __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes:', 'wp-bootstrap-starter' ) .
-            '</p><div class="alert alert-info">' . allowed_tags() . '</div>'
+            '</p><div class="alert alert-secondary">' . allowed_tags() . '</div>'
 
         // So, that was the needed stuff to have bootstrap basic styles for the form elements and buttons
 
