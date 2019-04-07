@@ -44,7 +44,10 @@ get_header(); ?>
 
                     endwhile;
 
-                    the_posts_navigation();
+                //page pagination
+                echo '<div class="pagination mx-auto">';
+                 the_posts_pagination();
+                echo '</div>';
 
                 else :
 

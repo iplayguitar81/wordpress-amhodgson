@@ -13,8 +13,6 @@ get_header(); ?>
 
 <?php
 
-
-
 $authorID = get_the_author_meta('ID');
 
 $authorName = get_the_author_meta('nicename');
@@ -30,8 +28,6 @@ $author_posts = query_posts( array(
         'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
     )
 );
-
-
 
 
 foreach ( $author_posts as $post ) :
