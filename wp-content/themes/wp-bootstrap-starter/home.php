@@ -16,11 +16,11 @@ get_header(); ?>
 
     <div class="container">
 
-<!--        <div class="row">-->
+
 
             <br/>
 
-<!--            <div class="col-12 col-lg-8 col-md-8">-->
+
                 <?php
                 if ( have_posts() ) :
 
@@ -51,15 +51,6 @@ get_header(); ?>
                     get_template_part( 'template-parts/content', 'none' );
 
                 endif; ?>
-
-<!--            </div>-->
-
-
-
-
-
-
-<!--        </div>-->
 
 
 
