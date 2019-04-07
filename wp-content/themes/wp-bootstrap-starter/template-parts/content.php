@@ -107,17 +107,38 @@
 
 		<?php
 		if ( is_single() ) :
-			the_title( '<h1 class="entry-title chand text-center mt-3">', '</h1>' );
+
+            echo '<h2 class="blog-index-titles chand mt-3 text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+
+            echo ucwords(get_the_title());
+
+            echo '</a></h2>';
+
+
+
 		else :
 
 
     if ( has_post_thumbnail() ) {
 
-        the_title( '<h2 class="blog-index-titles chand mt-3"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+
+        echo '<h2 class="blog-index-titles chand mt-3"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+
+        echo ucwords(get_the_title());
+
+        echo '</a></h2>';
+
+
     }
 
     else {
-        the_title( '<h2 class="blog-index-titles chand mt-3 text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+
+        echo '<h2 class="blog-index-titles chand mt-3 text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+
+        echo ucwords(get_the_title());
+
+        echo '</a></h2>';
+
     }
 
 		endif;
