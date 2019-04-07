@@ -161,7 +161,12 @@
             echo '</div>';
         else :
 
-            the_excerpt();
+        echo '<div class="georgia"><p class="author-excerpts">';
+
+        echo wp_trim_words( get_the_excerpt(), 25, '...  ' );
+        echo '<a href="';
+        the_permalink();
+        echo '" class="btn btn-md btn-dark"> Read More</a></p></div>';
 
         endif;
 
@@ -176,10 +181,7 @@
 		<?php wp_bootstrap_starter_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 
-
-
     </div>
-
 
 </div>
 

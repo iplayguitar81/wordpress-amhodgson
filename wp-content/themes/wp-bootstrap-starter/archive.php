@@ -9,15 +9,17 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area col-sm-12 col-lg-8">
-		<main id="main" class="site-main" role="main">
+
+
+    <div class="container">
+        <br/>
 
 		<?php
 		if ( have_posts() ) : ?>
 
 			<header class="page-header">
 				<?php
-					the_archive_title( '<h1 class="page-title">', '</h1>' );
+					the_archive_title( '<h1 class="georgia"> <i class="far fa-calendar-alt"></i> ', '</h1>' );
 					the_archive_description( '<div class="archive-description">', '</div>' );
 				?>
 			</header><!-- .page-header -->
@@ -35,7 +37,9 @@ get_header(); ?>
 
 			endwhile;
 
-			the_posts_navigation();
+            echo '<div class="pagination mx-auto">';
+            the_posts_pagination();
+            echo '</div><br/>';
 
 		else :
 
@@ -43,9 +47,16 @@ get_header(); ?>
 
 		endif; ?>
 
-		</main><!-- #main -->
-	</section><!-- #primary -->
+    </div>
+
+
+    <div class="row georgia mt-3">
+        <br/>
+        <?php
+        get_sidebar();
+        ?>
+    </div>
+
 
 <?php
-get_sidebar();
 get_footer();
