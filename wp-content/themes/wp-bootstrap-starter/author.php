@@ -78,7 +78,7 @@ wp_reset_postdata(); ?>
 
 
 
-    <div class=""><?php the_posts_pagination(); ?></div>
+    <div class="pagination mx-auto"><?php the_posts_pagination(); ?></div>
 
 
 </div>

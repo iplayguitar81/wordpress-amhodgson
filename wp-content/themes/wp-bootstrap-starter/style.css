@@ -392,6 +392,19 @@ p.author-excerpts {
     font-size: 1.2em;
 }
 
+
+.pagination{
+    margin-left:auto;
+    margin-right:auto;
+    font-size: 1.2em;
+    color: #000000;
+    font-family: Georgia;
+}
+
+.pagination a {
+    color: #000000;
+}
+
 body {
   margin: 0;
   /*-webkit-font-smoothing: auto;*/
