@@ -368,8 +368,17 @@ ul#recentcomments li.recentcomments a:hover {
     font-size: 1.3em;
 }
 
-#comments a {
+p.logged-in-as a {
     color:#000000;
+}
+
+ul.comment-list a {
+    color:#000000;
+}
+
+a.comment-reply-link {
+    color: #FFFFFF !important;
+
 }
 
 .single-meta{
