@@ -22,10 +22,12 @@ $authorName = get_the_author_meta('nicename');
 
 echo '<h1 class="georgia">All Posts by:  '.$authorName.' <i class="fas fa-user"></i></h1><br/>';
 
-$author_posts = get_posts( array(
+$author_posts = query_posts( array(
         'author' => $authorID,
         'numberposts' => -1,
-        'orderby' => 'date'
+        'orderby' => 'date',
+        'posts_per_page' => 5,
+        'paged' => ( get_query_var('paged') ? get_query_var('paged') : 1),
     )
 );
 
@@ -75,6 +77,11 @@ else {
 wp_reset_postdata(); ?>
 
 
+
+    <div class="navigation">
+        <div class="alignleft"><?php previous_posts_link('&laquo; Previous') ?></div>
+        <div class="alignright"><?php next_posts_link('More &raquo;') ?></div>
+    </div>
 
 
 </div>
