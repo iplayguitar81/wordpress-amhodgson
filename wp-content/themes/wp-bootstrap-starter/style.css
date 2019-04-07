@@ -397,12 +397,18 @@ p.author-excerpts {
     margin-left:auto;
     margin-right:auto;
     font-size: 1.2em;
-    color: #000000;
+    color: #FFFFFF;
     font-family: Georgia;
 }
 
 .pagination a {
-    color: #000000;
+    color: silver;
+}
+
+.pagination .nav-links {
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 5px;
 }
 
 body {
