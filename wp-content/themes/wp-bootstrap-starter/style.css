@@ -386,6 +386,12 @@ a.comment-reply-link {
 }
 
 
+/*author posts styles*/
+
+p.author-excerpts {
+    font-size: 1.2em;
+}
+
 body {
   margin: 0;
   /*-webkit-font-smoothing: auto;*/

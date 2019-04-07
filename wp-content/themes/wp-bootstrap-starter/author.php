@@ -20,11 +20,11 @@ $authorID = get_the_author_meta('ID');
 $authorName = get_the_author_meta('nicename');
 
 
-echo '<h1 class="georgia"> All Posts by:  '.$authorName.'</h1><br/>';
+echo '<h1 class="georgia">All Posts by:  '.$authorName.' <i class="fas fa-user"></i></h1><br/>';
 
 $author_posts = get_posts( array(
         'author' => $authorID,
-        'numberposts' => 5,
+        'numberposts' => -1,
         'orderby' => 'date'
     )
 );
@@ -35,15 +35,37 @@ $author_posts = get_posts( array(
 foreach ( $author_posts as $post ) :
     setup_postdata( $post ); ?>
     <div class="row mt-4">
-    <div class="col-lg-4 col-md-4 col-sm-12 col-12 order-1 order-lg-1 order-sm-1 mx-auto">
-    <?php the_post_thumbnail('original', array('class' => 'img-fluid'));?>
-    </div>
+
+
+<?php
+
+if ( has_post_thumbnail() ) {
+
+    echo '<div class="col-lg-4 col-md-4 col-sm-12 col-12 order-1 order-lg-1 order-sm-1 mx-auto">';
+    the_post_thumbnail('original', array('class' => 'img-fluid img-thumbnail'));
+    echo '</div>';
+
+}
+
+else {
+
+
+}
+
+?>
+<!--        if ( has_post_thumbnail() ) -->
+
+
+<!--    <div class="col-lg-4 col-md-4 col-sm-12 col-12 order-1 order-lg-1 order-sm-1 mx-auto">-->
+<!--    --><?php //the_post_thumbnail('original', array('class' => 'img-fluid img-thumbnail'));?>
+<!--    </div>-->
 
     <div class="col-lg-8 col-md-8 col-sm-12 col-12 order-1 order-lg-1 order-sm-1 mx-auto mt-4">
     <h2 class="chand mt-2 blog-index-titles"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
-    <?php echo wp_trim_words( get_the_excerpt(), 35, '...  ' ); ?><a href="<?php the_permalink()?>" class="btn btn-sm btn-dark"> Read More</a>
-
+        <div class="georgia"><p class="author-excerpts">
+    <?php echo wp_trim_words( get_the_excerpt(), 35, '...  ' ); ?><a href="<?php the_permalink()?>" class="btn btn-md btn-dark"> Read More</a></p>
+        </div>
 
 
     </div>
@@ -54,7 +76,9 @@ foreach ( $author_posts as $post ) :
     <hr/>
 
 <?php endforeach;
+
 wp_reset_postdata(); ?>
+
 
 
 
