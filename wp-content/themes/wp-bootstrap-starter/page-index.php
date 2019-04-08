@@ -36,20 +36,31 @@ $preview_posts = query_posts( array(
 
             echo '<div class="col-lg-4 col-md-4 col-sm-12 col-12 order-1 order-lg-2 order-md-2 order-sm-1 mx-auto">';
             the_post_thumbnail('original', array('class' => 'img-fluid img-thumbnail'));
-            echo '</div><div class="col-lg-8 col-md-8 col-sm-12 col-12 order-2 order-lg-1 order-md-1 order-sm-2 mx-auto mt-4"><h2 class="chand mt-2 blog-index-titles">';
+            echo '</div><div class="col-lg-8 col-md-8 col-sm-12 col-12 order-2 order-lg-1 order-md-1 order-sm-2 mx-auto mt-4">';
 
+            //echo '<h2 class="chand mt-2 blog-index-titles">';
+
+            echo '<h2 class="blog-index-titles chand mt-3"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+
+            echo ucwords(get_the_title());
+
+            echo '</a></h2>';
         }
 
         else {
 
-            echo '<div class="col-lg-12 col-md-12 col-sm-12 col-12 order-1 order-lg-1 order-sm-1 mx-auto mt-4"><h2 class="chand mt-2 blog-index-titles text-center">';
+            echo '<div class="col-lg-12 col-md-12 col-sm-12 col-12 order-1 order-lg-1 order-sm-1 mx-auto mt-4">';
+
+            echo '<h2 class="blog-index-titles chand mt-3 text-center"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">';
+
+            echo ucwords(get_the_title());
+
+            echo '</a></h2>';
 
         }
 
         ?>
 
-        <!--    <h2 class="chand mt-2 blog-index-titles">-->
-        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
         <div class="georgia"><p class="author-excerpts">
                 <?php echo wp_trim_words( get_the_excerpt(), 35, '...  ' ); ?><a href="<?php the_permalink()?>" class="btn btn-md btn-dark"> Read More</a></p>
