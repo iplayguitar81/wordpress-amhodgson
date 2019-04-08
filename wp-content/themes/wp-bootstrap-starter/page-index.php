@@ -164,10 +164,9 @@ wp_reset_postdata(); ?>
 
 </div>
 
-
-
-
     <br/>
+    <br/>
+    <hr/>
     <br/>
 
     <div class="row georgia mt-3">
