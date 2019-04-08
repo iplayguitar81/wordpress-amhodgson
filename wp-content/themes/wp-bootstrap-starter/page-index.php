@@ -14,16 +14,52 @@
 
 get_header();
 
-$preview_posts = query_posts( array(
-    'posts_per_page' => 3,
-    'orderby' => 'date',
-));
+
 
 ?>
 
 <div class="container">
 
+    <div class="col-lg-12 col-md-12 col-sm-12 col-12 mx-auto mt-5">
+        <?php
+        while ( have_posts() ) : the_post();
+
+            the_title( '<h1 class="text-center entry-title georgia">', '</h1>' );
+//                get_template_part( 'template-parts/content', 'page' );
+
+            echo'<div class="entry-content ec-author georgia mx-auto">';
+            the_content();
+
+            echo '</div>';
+
+            // If comments are open or we have at least one comment, load up the comment template.
+            if ( comments_open() || get_comments_number() ) :
+                comments_template();
+            endif;
+
+        endwhile; // End of the loop.
+
+        edit_post_link(
+            sprintf(
+            /* translators: %s: Name of current post */
+                esc_html__( 'Edit %s', 'wp-bootstrap-starter' ),
+                the_title( '<span class="screen-reader-text">"', '"</span>', false )
+            ),
+            '<span class="edit-link">',
+            '</span>'
+        );
+        ?>
+
+        <hr/>
+
+    </div>
+
  <?php
+
+$preview_posts = query_posts( array(
+    'posts_per_page' => 3,
+    'orderby' => 'date',
+));
 
     foreach ( $preview_posts as $post ) :
     setup_postdata( $post ); ?>
@@ -35,7 +71,12 @@ $preview_posts = query_posts( array(
         if ( has_post_thumbnail() ) {
 
             echo '<div class="col-lg-4 col-md-4 col-sm-12 col-12 order-1 order-lg-2 order-md-2 order-sm-1 mx-auto">';
+
+            echo '<a href="';
+            the_permalink();
+            echo '">';
             the_post_thumbnail('original', array('class' => 'img-fluid img-thumbnail'));
+            echo '</a>';
             echo '</div><div class="col-lg-8 col-md-8 col-sm-12 col-12 order-2 order-lg-1 order-md-1 order-sm-2 mx-auto mt-4">';
 
             //echo '<h2 class="chand mt-2 blog-index-titles">';
@@ -45,6 +86,7 @@ $preview_posts = query_posts( array(
             echo ucwords(get_the_title());
 
             echo '</a></h2>';
+
         }
 
         else {
@@ -59,12 +101,44 @@ $preview_posts = query_posts( array(
 
         }
 
+        if ( has_post_thumbnail() ) {
+            echo '<div class="entry-meta">';
+
+        }
+
+        else {
+            echo '<div class="entry-meta text-center">';
+
+        }
+
+        wp_bootstrap_starter_posted_on();
+
+
         ?>
+
+
+
+        </div>
+        <br/>
+
 
 
         <div class="georgia"><p class="author-excerpts">
                 <?php echo wp_trim_words( get_the_excerpt(), 35, '...  ' ); ?><a href="<?php the_permalink()?>" class="btn btn-md btn-dark"> Read More</a></p>
         </div>
+        <br/>
+        <?php
+        edit_post_link(
+            sprintf(
+            /* translators: %s: Name of current post */
+                esc_html__( 'Edit %s', 'wp-bootstrap-starter' ),
+                the_title( '<span class="screen-reader-text">"', '"</span>', false )
+            ),
+            '<span class="edit-link">',
+            '</span>'
+        );
+        ?>
+
 
 
     </div>
@@ -83,6 +157,10 @@ wp_reset_postdata(); ?>
 
     <br/>
 
+
+<div class="georgia text-center">
+<a href="/blog" class="btn btn-lg btn-dark"><i class="fas fa-blog"></i> View Blog</a>
+</div>
 
 </div>
 
