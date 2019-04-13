@@ -22,22 +22,6 @@ get_header();
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-12 mx-auto mt-5">
         <?php
-        while ( have_posts() ) : the_post();
-
-//            the_title( '<h1 class="text-center entry-title georgia">', '</h1>' );
-//                get_template_part( 'template-parts/content', 'page' );
-
-            echo'<div class="entry-content ec-author georgia mx-auto">';
-            the_content();
-
-            echo '</div>';
-
-            // If comments are open or we have at least one comment, load up the comment template.
-            if ( comments_open() || get_comments_number() ) :
-                comments_template();
-            endif;
-
-        endwhile; // End of the loop.
 
         edit_post_link(
             sprintf(
@@ -48,6 +32,26 @@ get_header();
             '<span class="edit-link">',
             '</span>'
         );
+
+
+        while ( have_posts() ) : the_post();
+
+//            the_title( '<h1 class="text-center entry-title georgia">', '</h1>' );
+//                get_template_part( 'template-parts/content', 'page' );
+
+
+            echo'<div class="entry-content ec-author georgia mx-auto">';
+            the_content();
+            echo '</div>';
+
+            // If comments are open or we have at least one comment, load up the comment template.
+            if ( comments_open() || get_comments_number() ) :
+                comments_template();
+            endif;
+
+        endwhile; // End of the loop.
+
+
         ?>
 
         <hr/>
