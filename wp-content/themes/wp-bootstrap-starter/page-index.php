@@ -24,7 +24,7 @@ get_header();
         <?php
         while ( have_posts() ) : the_post();
 
-            the_title( '<h1 class="text-center entry-title georgia">', '</h1>' );
+//            the_title( '<h1 class="text-center entry-title georgia">', '</h1>' );
 //                get_template_part( 'template-parts/content', 'page' );
 
             echo'<div class="entry-content ec-author georgia mx-auto">';
