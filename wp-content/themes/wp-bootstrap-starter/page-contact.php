@@ -28,6 +28,26 @@ function my_contact_form_generate_response($type, $message){
 }
 
 
+//response messages
+$not_human       = "Human verification incorrect.";
+$missing_content = "Please supply all information.";
+$email_invalid   = "Email Address Invalid.";
+$message_unsent  = "Message was not sent. Try Again.";
+$message_sent    = "Thanks! Your message has been sent.";
+
+//user posted variables
+$name = $_POST['message_name'];
+$email = $_POST['message_email'];
+$message = $_POST['message_text'];
+$human = $_POST['message_human'];
+
+//php mailer variables
+$to = get_option('admin_email');
+$subject = "Someone sent a message from ".get_bloginfo('name');
+$headers = 'From: '. $email . "\r\n" .
+    'Reply-To: ' . $email . "\r\n";
+
+
 get_header(); ?>
 
     <div class="container">
