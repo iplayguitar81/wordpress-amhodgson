@@ -13,28 +13,67 @@
  */
 
 get_header(); ?>
-    <br/>
-    <br/>
 
-    <section id="primary" class="content-area col-sm-12 col-lg-8">
-        <main id="main" class="site-main" role="main">
+    <div class="container">
+
+        <div class="row">
+    <div class="col-lg-12 mx-auto mt-5">
 
             <?php
+
+            edit_post_link(
+                sprintf(
+                /* translators: %s: Name of current post */
+                    esc_html__( 'Edit %s', 'wp-bootstrap-starter' ),
+                    the_title( '<span class="screen-reader-text">"', '"</span>', false )
+                ),
+                '<span class="edit-link">',
+                '</span>'
+            );
+
             while ( have_posts() ) : the_post();
-
-                get_template_part( 'template-parts/content', 'page' );
-
-                // If comments are open or we have at least one comment, load up the comment template.
-                if ( comments_open() || get_comments_number() ) :
-                    comments_template();
-                endif;
+                the_title( '<h1 class="text-center entry-title chand">', '</h1>' );
+                echo'<div class="entry-content ec-author georgia mx-auto">';
+                the_content();
+                echo '</div>';
 
             endwhile; // End of the loop.
             ?>
 
-        </main><!-- #main -->
-    </section><!-- #primary -->
+                <?php echo $response; ?>
+                <form class="georgia" action="<?php the_permalink(); ?>" method="post">
+                    <div class="form-group"><label class="col-form-label" for="name">Name</label><input class="form-control form-control-lg" type="text" name="message_name" value="<?php echo esc_attr($_POST['message_name']); ?>"></div>
+                    <div class="form-group"><label class="col-form-label" for="message_email">Email</label><input class="form-control form-control-lg" type="text" name="message_email" value="<?php echo esc_attr($_POST['message_email']); ?>"></div>
+                    <div class="form-group"><label class="col-form-label" for="message_text">Message</label><textarea class="form-control form-control-lg" type="text" name="message_text"><?php echo esc_textarea($_POST['message_text']); ?></textarea></div>
+                    <input type="hidden" name="submitted" value="1">
+                        <div class="col-6 mx-auto">
+                            <div class="form-group mx-auto"><label class="col-form-label" for="message_human">Human Verification<br/><span class="text-muted">? + 3 = 5</span></label><input class="form-control form-control-lg" type="text" style="width: 60px;" name="message_human"></div>
+                    <div class="form-group"><input class="btn btn-lg btn-dark btn-block" type="submit"></div>
+                        </div>
+                </form>
+            <br/>
+
+            </div>
+
+        </div>
+
+
+     </div>
+
+    <hr/>
+    <br/>
+
+    <div class="row georgia mt-3">
+        <br/>
+
+
+
+        <?php
+        get_sidebar();
+        ?>
+
+    </div>
+
 
 <?php
-//get_sidebar();
 get_footer();

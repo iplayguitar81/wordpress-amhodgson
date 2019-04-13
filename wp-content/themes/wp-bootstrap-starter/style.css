@@ -440,6 +440,14 @@ p.author-excerpts {
     padding: 5px;
 }
 
+/*contact form styling...*/
+
+label {
+    font-size: 1.3em !important;
+    font-weight: 600;
+}
+
+
 body {
   margin: 0;
   /*-webkit-font-smoothing: auto;*/
