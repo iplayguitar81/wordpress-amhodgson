@@ -12,6 +12,22 @@
  * @package WP_Bootstrap_Starter
  */
 
+//contact form logic...
+
+//response generation function
+$response = "";
+
+//function to generate response
+function my_contact_form_generate_response($type, $message){
+
+    global $response;
+
+    if($type == "success") $response = "<div class='success'>{$message}</div>";
+    else $response = "<div class='error'>{$message}</div>";
+
+}
+
+
 get_header(); ?>
 
     <div class="container">
