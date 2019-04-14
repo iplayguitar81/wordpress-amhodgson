@@ -43,6 +43,8 @@ $human = $_POST['message_human'];
 
 //php mailer variables
 $to = get_option('admin_email');
+
+
 $subject = "Someone sent a message from ".get_bloginfo('name');
 $headers = 'From: '. $email . "\r\n" .
     'Reply-To: ' . $email . "\r\n";
@@ -63,6 +65,7 @@ if(!$human == 0){
             else //ready to go!
             {
                 //send email
+//                wp_mail( $to, $subject, $message, $headers = '', $attachments = array())
                 $sent = wp_mail($to, $subject, strip_tags($message), $headers);
                 if($sent) my_contact_form_generate_response("success", $message_sent); //message sent!
                 else my_contact_form_generate_response("error", $message_unsent); //message wasn't sent
